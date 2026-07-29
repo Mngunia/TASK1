@@ -1,0 +1,23 @@
+   case 'T': return "-";
+        case 'U': return "..-";
+        case 'V': return "...-";
+        case 'W': return ".--";
+        case 'X': return "-..-";
+        case 'Y': return "-.--";
+        case 'Z': return "--..";
+        default: return "";
+    }
+}
+
+int main() {
+    string message, fullMorse = "";
+    
+    cout << "Enter a short message: ";
+    getline(cin, message);
+    
+    cout << "\nMorse code translation:\n";
+    
+    // Loop through each character
+    for(int i = 0; i < message.length(); i++) {
+        char ch = toupper(message[i]); // convert to uppercase
+        
