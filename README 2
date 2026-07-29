@@ -1,0 +1,8 @@
+ case 'C': return "-.-.";
+        case 'D': return "-..";
+        case 'E': return ".";
+        case 'F': return "..-.";
+        case 'G': return "--.";
+        case 'H': return "....";
+        case 'I': return "..";
+        case 'J': return ".---";
