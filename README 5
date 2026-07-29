@@ -1,0 +1,25 @@
+   // Loop through each character
+    for(int i = 0; i < message.length(); i++) {
+        char ch = toupper(message[i]); // convert to uppercase
+        
+        // Only process A-Z
+        if(ch >= 'A' && ch <= 'Z') {
+            string code = getMorse(ch);
+            
+            // Replace. with • and - with -
+            for(int j = 0; j < code.length(); j++) {
+                if(code[j] == '.') code[j] = 46; // ASCII 46 = •
+                else if(code[j] == '-') code[j] = 45; // ASCII 45 = -
+            }
+            
+            // Output individual letter
+            cout << ch << ": " << code << endl;
+            
+            // Build full message with 3 spaces between letters
+            fullMorse += code + " ";
+        }
+    }
+    
+    cout << "\nFull Morse code with spaces:\n" << fullMorse << endl;
+    
+    return 0;
